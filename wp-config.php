@@ -12,7 +12,6 @@
  * * Chaves secretas
  * * Prefixo do banco de dados
  * * ABSPATH
- * * Não pode subir
  *
  * @link https://wordpress.org/support/article/editing-wp-config-php/
  *
