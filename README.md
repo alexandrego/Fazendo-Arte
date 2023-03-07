@@ -7,3 +7,6 @@ Utilização de REST API desenvolvida com PHP.
 
 ## Concluida a instalação do Wordpress e WooCommerce
 Instalado junto o pacote de plugins aconselhados pelo WooCommerce.
+
+## Alguns efeitos de loaders
+--> https://10015.io/tools/css-loader-generator.

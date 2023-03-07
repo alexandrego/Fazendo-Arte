@@ -1,0 +1,79 @@
+/*
+Theme Name: Fazendo Arte
+Theme URI: https://fazendoarte.art.br
+Author: Alexandre Campos Gonçalves
+Author URI: https://www.linkedin.com/in/alexandrecgoncalves/
+Description: E-commerce de Artesanato.
+Tags: loja de artesanto, ecommerce arte e etc
+Version: 1.0
+Requires at least: 5.9
+Tested up to: 5.7
+Requires PHP: 7.4
+Text Domain: fazendo-arte
+Domain: /languages
+*/
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background: rgb(207, 207, 207);
+}
+.divFirstLoader{
+  max-width: 100%;
+  height: 100vh;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.showInitialLogo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.imgLogo{
+  width: 150px;
+  border-radius: 50%;
+}
+.progress {
+  height: 4.5px;
+  width: 145.6px;
+  margin-top: 10px;
+  background: linear-gradient(#76393d 0 0),
+      linear-gradient(#623f3f 0 0),
+      rgb(226, 215, 199);
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  animation: progress-7x9cg2 4s infinite;
+}
+@keyframes progress-7x9cg2 {
+  0% {
+     background-position: -150% 0,-150% 0;
+  }
+  66% {
+     background-position: 250% 0,-150% 0;
+  }
+  100% {
+     background-position: 250% 0, 250% 0;
+  }
+}
+.logoFirstPage{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(115, 89, 89);
+  margin-top: 10px;
+}
+.showDeveloper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+}
