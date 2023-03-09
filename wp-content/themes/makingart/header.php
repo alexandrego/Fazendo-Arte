@@ -8,11 +8,11 @@
   <?php wp_head(); ?>
 </head>
 <!-- <body onload="waitThreeSeconds()"> -->
-<body onload="showLogo()">
+<body onload="splashScreen()">
 
   <div id="divFirstLoader" class="divFirstLoader">
     <div class="showInitialLogo">
-      <img src="./wp-content/themes/makingart/assets/images/fazendo-arte.png" class="imgLogo">
+      <img src="./wp-content/themes/makingart/assets/images/fazendo-arte.webp" class="imgLogo">
 
       <div class="progress"></div>
 

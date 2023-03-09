@@ -19,6 +19,7 @@ Domain: /languages
 body{
   background: rgb(207, 207, 207);
 }
+/* Splash Screen */
 .divFirstLoader{
   max-width: 100%;
   height: 100vh;
@@ -38,7 +39,7 @@ body{
   width: 150px;
   border-radius: 50%;
 }
-.progress {
+.progress{
   height: 4.5px;
   width: 145.6px;
   margin-top: 10px;
@@ -49,7 +50,7 @@ body{
   background-repeat: no-repeat;
   animation: progress-7x9cg2 4s infinite;
 }
-@keyframes progress-7x9cg2 {
+@keyframes progress-7x9cg2{
   0% {
      background-position: -150% 0,-150% 0;
   }
@@ -76,4 +77,106 @@ body{
   
   font-family: 'Courier New', Courier, monospace;
   font-size: 12px;
+}
+
+/* Home Page */
+#divSplashScreen{
+  display: none;
+}
+/* Header */
+.divHeader{
+  width:100%;
+  background-color:antiquewhite;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-around;
+  padding:10px 0;
+}
+/* Div da Logo */
+.divLogo{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.imgPrincipalLogo{
+  border-radius:50%;
+  width:40%;
+  transition: 0.5s;
+}
+.imgPrincipalLogo:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* Div do campo busca */
+.inputSearch{
+  width:400px;
+  height:35px;
+  border-radius:50px 0 0 50px;
+  padding: 5px 5px 5px 20px;
+  font-size:14px;
+  outline:none;
+  border:none;
+}
+.inputSearch:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.inputSearch:focus{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.searchInputAndButton{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.searchSubmitButton{  
+  height:35px;
+  outline: none;
+  border: none;  
+  border-radius:0 50px 50px 0;
+  display: flex;
+  background: white;
+  align-items: center;
+  justify-content: center;
+}
+.searchSubmitButton:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* Div Área Logado */
+.divAreaLogado{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+}
+.divIconeLogar{
+  width: 40px;
+  height: 40px;
+}
+.divIconeLogar a{
+  text-decoration: none;
+}
+.dashicons-admin-users:before {
+  font-size: 40px;
+  color: #452828;
+}
+
+/* Div Carrinho */
+.divCart{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
+}
+.divIconeCart{
+  width: 40px;
+  height: 40px;
+}
+.divIconeCart a{
+  text-decoration: none;
+}
+.dashicons-cart:before{
+  font-size: 40px;
+  color: #452828;
 }

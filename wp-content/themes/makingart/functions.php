@@ -18,6 +18,8 @@ function fazendo_arte_scripts(){
 
   wp_enqueue_style('fazendo-arte-style', get_template_directory_uri() . '/style.css');
 
+  wp_enqueue_style( 'dashicons' );
+
   wp_enqueue_script('fazendo-arte-first-page', get_template_directory_uri() . '/assets/js/firstPage.js', '1.0', true);
 
   wp_enqueue_script('popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', array('jquery'), '1', true);
