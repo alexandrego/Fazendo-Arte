@@ -2,22 +2,12 @@
   get_header();
   get_template_part('partials/post', 'header');
 ?>
-  <div class="container">
+  <div class="container" id="container">
     <div class="row">
       <div class="col-sm-12">
         <?php
-          if(have_posts()):
-            while(have_posts()) :
-              the_post();
-              
-              get_template_part('partials/post', 'default');
-
-            endwhile;
-          else :
-            ?>
-              <h3>Posts not found!</h3>
-            <?php
-          endif;
+          get_template_part('partials/post', 'slide');
+          // get_template_part('partials/post', 'products');
         ?>
       </div>
     </div>
@@ -25,5 +15,3 @@
 <?php
   get_footer();
 ?>
-
-<!-- </div> Div SplashScreen -->

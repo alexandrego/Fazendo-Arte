@@ -10,3 +10,7 @@ Instalado junto o pacote de plugins aconselhados pelo WooCommerce.
 
 ## Alguns efeitos de loaders
 --> https://10015.io/tools/css-loader-generator.
+
+## Implementação Autenticação local com BIOMETRIA no React Native
+--> https://www.youtube.com/watch?v=8dkwk6d8vdY
+

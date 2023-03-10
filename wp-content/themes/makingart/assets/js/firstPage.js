@@ -1,34 +1,65 @@
-function waitThreeSeconds(){
-  const timeOut = 2000
-  const showHeader = () => showLogo()
-
-  setTimeout(showHeader, timeOut)
-}
- 
+// Ajusta Splash Screen 
 function splashScreen() {
-  document.getElementById("divFirstLoader").style.display = "none";
-  document.getElementById("divSplashScreen").style.display = "contents";
+  document.getElementById("divFirstLoader").style.display = "none"
+  document.getElementById("divSplashScreen").style.display = "contents"
+
+  startSlides()
 }
 
-function showLogo(){
-  const element = document.getElementById('mostraLogo')
-  element.innerHTML = `<div style="width:100%;background-color:antiquewhite;display:flex;flex-direction:row;align-items:center;justify-content:space-around;padding:10px 0;">
-                        <a href="#">
-                          <div style="display:flex;align-items:center;justify-content:center;">
-                            <img src="./wp-content/themes/makingart/assets/images/fazendo-arte.png" alt="Logo Fazendo Arte" style="border-radius:50%;width:40%;">
-                          </div>
-                        </a>
+// Código dos slides da home
+function startSlides() {
+  const timeOut = 3500
+  const changeSlide = () => callSecondSlide()
 
-                        <div>
-                          <input type="text" style="width:400px;height:35px;border-radius:50px;padding: 5px 20px;font-size:14px;outline:none;border:none;" placeholder="Pesquise aqui o seu produto" />                    
-                        </div>
+  setTimeout(changeSlide, timeOut)
+}
 
-                        <div style="display:flex;align-items:center;justify-content:center;">
-                          <p>Área do Cliente</p>
-                        </div>
+function callFirstSlide() {
+  const timeOut = 3500
+  const changeSlide = () => callInitialSlide()
 
-                        <div style="display:flex;align-items:center;justify-content:center;">
-                          <p>Carrinho</p>
+  setTimeout(changeSlide, timeOut)
+}
+
+function callInitialSlide(){
+  const element = document.getElementById('divSlides1')
+  element.innerHTML = `
+                      <div class="divSlides" id="divSlides">
+                      <div class="infoSlide">
+                        <div class="titleSlide">
+                          <p>Puxa Saco</p>
                         </div>
-                      </div>`
+                        
+                        <div class="buttonSlide">
+                          <a href="#">Saiba mais</a>
+                        </div>
+                      </div>
+
+                      <div class="divSlidesImg">
+                        <img src="./wp-content/themes/makingart/assets/images/puxa-saco.webp" class="imgSlides"/>
+                      </div>
+                    </div>`
+  startSlides()
+}
+
+function callSecondSlide() {
+  const element = document.getElementById('divSlides')
+  element.innerHTML = `
+  <div class="divSlides" id="divSlides1">
+    <div class="divSlidesImg">
+      <img src="./wp-content/themes/makingart/assets/images/puxa-saco1.webp" class="imgSlides"/>
+    </div>
+  
+    <div class="infoSlide">
+      <div class="titleSlide">
+        <p>Puxa Saco</p>
+      </div>
+      
+      <div class="buttonSlide">
+        <a href="#">Saiba mais</a>
+      </div>
+    </div>
+  </div>`
+
+  callFirstSlide()
 }
