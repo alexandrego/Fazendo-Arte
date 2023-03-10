@@ -14,3 +14,5 @@ Instalado junto o pacote de plugins aconselhados pelo WooCommerce.
 ## Implementação Autenticação local com BIOMETRIA no React Native
 --> https://www.youtube.com/watch?v=8dkwk6d8vdY
 
+## Biblioteca de Icones
+--> https://iconscout.com/
