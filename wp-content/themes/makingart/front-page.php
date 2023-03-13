@@ -7,7 +7,7 @@
       <div class="col-sm-12">
         <?php
           get_template_part('partials/post', 'slide');
-          // get_template_part('partials/post', 'products');
+          get_template_part('partials/post', 'products');
         ?>
       </div>
     </div>
