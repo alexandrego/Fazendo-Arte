@@ -2,14 +2,14 @@
 # This file is distributed under the same license as the MailPoet plugin.
 msgid ""
 msgstr ""
-"Project-Id-Version: MailPoet 4.8.0\n"
+"Project-Id-Version: MailPoet 4.8.1\n"
 "Report-Msgid-Bugs-To: http://support.mailpoet.com/\n"
 "Last-Translator: MailPoet i18n (https://www.transifex.com/organization/wysija)\n"
 "Language-Team: MailPoet i18n <https://www.transifex.com/organization/wysija>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-03-06T13:52:47+00:00\n"
+"POT-Creation-Date: 2023-03-14T11:19:30+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.6.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -1142,8 +1142,8 @@ msgid "<strong>Tip:</strong> check out [link]this list[/link] of form plugins th
 msgstr ""
 
 #: views/forms.html:44
-#: lib/Config/Menu.php:283
-#: lib/Config/Menu.php:284
+#: lib/Config/Menu.php:271
+#: lib/Config/Menu.php:272
 msgid "Forms"
 msgstr ""
 
@@ -1347,8 +1347,8 @@ msgstr ""
 #: views/newsletters.html:292
 #: views/segments.html:35
 #: views/subscribers/subscribers.html:86
-#: lib/Config/Menu.php:400
-#: lib/Config/Menu.php:401
+#: lib/Config/Menu.php:388
+#: lib/Config/Menu.php:389
 msgid "Lists"
 msgstr ""
 
@@ -1816,8 +1816,8 @@ msgstr ""
 
 #: views/homepage.html:68
 #: views/subscribers/subscribers.html:25
-#: lib/Config/Menu.php:349
-#: lib/Config/Menu.php:350
+#: lib/Config/Menu.php:337
+#: lib/Config/Menu.php:338
 #: assets/dist/js/automation.js:2
 msgid "Subscribers"
 msgstr ""
@@ -2538,31 +2538,38 @@ msgstr ""
 
 #: views/layout.html:312
 #: views/layout.html:323
+#: lib/Form/Block/BlockRendererHelper.php:276
 msgid "This value seems to be invalid."
 msgstr ""
 
 #: views/layout.html:314
 #: lib/Form/Block/BlockRendererHelper.php:37
+#: lib/Form/Block/BlockRendererHelper.php:264
 msgid "This value should be a valid email."
 msgstr ""
 
 #: views/layout.html:315
+#: lib/Form/Block/BlockRendererHelper.php:266
 msgid "This value should be a valid url."
 msgstr ""
 
 #: views/layout.html:316
+#: lib/Form/Block/BlockRendererHelper.php:268
 msgid "This value should be a valid number."
 msgstr ""
 
 #: views/layout.html:317
+#: lib/Form/Block/BlockRendererHelper.php:270
 msgid "This value should be a valid integer."
 msgstr ""
 
 #: views/layout.html:318
+#: lib/Form/Block/BlockRendererHelper.php:272
 msgid "This value should be digits."
 msgstr ""
 
 #: views/layout.html:319
+#: lib/Form/Block/BlockRendererHelper.php:274
 msgid "This value should be alphanumeric."
 msgstr ""
 
@@ -2692,7 +2699,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #: views/logs.html:21
-#: lib/Config/Menu.php:488
+#: lib/Config/Menu.php:476
 msgid "Logs"
 msgstr ""
 
@@ -2835,14 +2842,14 @@ msgid "MailPoet account connected"
 msgstr ""
 
 #: views/newsletter/editor.html:340
-#: lib/Config/Menu.php:269
+#: lib/Config/Menu.php:257
 msgid "Newsletter Editor"
 msgstr ""
 
 #: views/newsletter/editor.html:383
 #: views/newsletters.html:71
 #: views/newsletters.html:223
-#: lib/Config/Menu.php:268
+#: lib/Config/Menu.php:256
 #: lib/Newsletter/Shortcodes/ShortcodesHelper.php:42
 msgid "Newsletter"
 msgstr ""
@@ -4725,8 +4732,8 @@ msgid "Global background"
 msgstr ""
 
 #: views/newsletters.html:69
-#: lib/Config/Menu.php:243
-#: lib/Config/Menu.php:244
+#: lib/Config/Menu.php:231
+#: lib/Config/Menu.php:232
 msgid "Emails"
 msgstr ""
 
@@ -4834,8 +4841,8 @@ msgstr ""
 #: views/newsletters.html:136
 #: views/settings.html:34
 #: lib/Config/Hooks.php:466
-#: lib/Config/Menu.php:425
-#: lib/Config/Menu.php:426
+#: lib/Config/Menu.php:413
+#: lib/Config/Menu.php:414
 #: assets/dist/js/automation_editor.js:1
 msgid "Settings"
 msgstr ""
@@ -5641,8 +5648,8 @@ msgstr ""
 #: views/newsletters.html:424
 #: views/segments.html:248
 #: views/subscribers/subscribers.html:135
-#: lib/Config/Menu.php:452
-#: lib/Config/Menu.php:453
+#: lib/Config/Menu.php:440
+#: lib/Config/Menu.php:441
 #: assets/dist/js/commons.js:9
 msgid "Upgrade"
 msgstr ""
@@ -7500,8 +7507,8 @@ msgstr ""
 #: views/subscribers/importExport/export.html:6
 #: views/subscribers/importExport/export.html:80
 #: views/subscribers/subscribers.html:127
-#: lib/Config/Menu.php:387
-#: lib/Config/Menu.php:388
+#: lib/Config/Menu.php:375
+#: lib/Config/Menu.php:376
 msgid "Export"
 msgstr ""
 
@@ -7558,8 +7565,8 @@ msgstr ""
 #: views/subscribers/importExport/import.html:6
 #: views/subscribers/importExport/import.html:99
 #: views/subscribers/subscribers.html:126
-#: lib/Config/Menu.php:374
-#: lib/Config/Menu.php:375
+#: lib/Config/Menu.php:362
+#: lib/Config/Menu.php:363
 msgid "Import"
 msgstr ""
 
@@ -8618,9 +8625,9 @@ msgstr ""
 #. Plugin Name of the plugin
 #. Author of the plugin
 #: lib/Config/Capabilities.php:80
-#: lib/Config/Menu.php:211
-#: lib/Config/Menu.php:212
-#: lib/Config/Menu.php:632
+#: lib/Config/Menu.php:201
+#: lib/Config/Menu.php:202
+#: lib/Config/Menu.php:620
 #: lib/Config/PrivacyPolicy.php:12
 msgid "MailPoet"
 msgstr ""
@@ -9794,73 +9801,73 @@ msgstr ""
 msgid "Unable to connect to the database (the database is unable to open a file or folder), the connection is likely not configured correctly. Please read our [link] Knowledge Base article [/link] for steps how to resolve it."
 msgstr ""
 
-#: lib/Config/Menu.php:198
-#: lib/Config/Menu.php:199
+#: lib/Config/Menu.php:188
+#: lib/Config/Menu.php:189
 msgid "Welcome Wizard"
 msgstr ""
 
-#: lib/Config/Menu.php:229
-#: lib/Config/Menu.php:230
+#: lib/Config/Menu.php:218
+#: lib/Config/Menu.php:219
 msgid "Home"
 msgstr ""
 
-#: lib/Config/Menu.php:256
+#: lib/Config/Menu.php:244
 msgctxt "newsletters per page (screen options)"
 msgid "Number of newsletters per page"
 msgstr ""
 
-#: lib/Config/Menu.php:296
+#: lib/Config/Menu.php:284
 msgctxt "forms per page (screen options)"
 msgid "Number of forms per page"
 msgstr ""
 
-#: lib/Config/Menu.php:308
-#: lib/Config/Menu.php:309
+#: lib/Config/Menu.php:296
+#: lib/Config/Menu.php:297
 msgid "Form Editor"
 msgstr ""
 
-#: lib/Config/Menu.php:328
-#: lib/Config/Menu.php:329
+#: lib/Config/Menu.php:316
+#: lib/Config/Menu.php:317
 msgid "Select Form Template"
 msgstr ""
 
-#: lib/Config/Menu.php:362
+#: lib/Config/Menu.php:350
 msgctxt "subscribers per page (screen options)"
 msgid "Number of subscribers per page"
 msgstr ""
 
-#: lib/Config/Menu.php:413
+#: lib/Config/Menu.php:401
 msgctxt "segments per page (screen options)"
 msgid "Number of segments per page"
 msgstr ""
 
-#: lib/Config/Menu.php:438
-#: lib/Config/Menu.php:439
+#: lib/Config/Menu.php:426
+#: lib/Config/Menu.php:427
 msgid "Help"
 msgstr ""
 
-#: lib/Config/Menu.php:465
-#: lib/Config/Menu.php:466
+#: lib/Config/Menu.php:453
+#: lib/Config/Menu.php:454
 msgid "WooCommerce Setup"
 msgstr ""
 
-#: lib/Config/Menu.php:478
+#: lib/Config/Menu.php:466
 msgid "Experimental Features"
 msgstr ""
 
-#: lib/Config/Menu.php:499
-#: lib/Config/Menu.php:501
+#: lib/Config/Menu.php:487
+#: lib/Config/Menu.php:489
 #: assets/dist/js/automation.js:2
 msgid "Automations"
 msgstr ""
 
-#: lib/Config/Menu.php:510
-#: lib/Config/Menu.php:511
+#: lib/Config/Menu.php:498
+#: lib/Config/Menu.php:499
 msgid "Automation Editor"
 msgstr ""
 
-#: lib/Config/Menu.php:520
-#: lib/Config/Menu.php:521
+#: lib/Config/Menu.php:508
+#: lib/Config/Menu.php:509
 msgid "Automation Templates"
 msgstr ""
 
@@ -10919,7 +10926,7 @@ msgstr ""
 msgid "Please specify a valid phone number."
 msgstr ""
 
-#: lib/Form/Block/BlockRendererHelper.php:77
+#: lib/Form/Block/BlockRendererHelper.php:78
 msgid "Please select at least one option."
 msgstr ""
 
