@@ -19,6 +19,9 @@ Domain: /languages
 body{
   background: rgb(255, 249, 249);
 }
+#container{
+  animation: show-in 1.5s;  
+}
 /* Splash Screen */
 .divFirstLoader{
   max-width: 100%;
@@ -205,6 +208,9 @@ body{
   background-image: radial-gradient(circle, antiquewhite 2%, rgb(255, 249, 249) 90%);
   animation: show-in 1.5s;
 }
+.searchProduct{  
+  animation: show-in 1.5s;
+}
 @keyframes show-in {
   from {
     transform: translateX(100px);
@@ -256,7 +262,8 @@ body{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: center;  
+  animation: show-in 1.5s;
 }
 #shimmerEffect {
   margin: 35px;
@@ -293,6 +300,32 @@ body{
     background-position: 468px 0; 
   }
 }
+
+/* Estilo do Loop de produtos */
+.divProductLoop{}
+.divContainerProduct{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.divContainerProduct a{
+  text-decoration: none;
+  margin: 20px 0;
+}
+.divIndividualProduct{
+  width: 200px;
+  background-color: white;
+  padding: 0 8px;
+  border-radius: 8px;
+}
+.divIndividualProduct img{
+  width: 200px;
+}
+.IndividualProductTitle{}
+.divIndividualProductPrice{}
+
 
 @media screen and (max-width: 700px){
   .divSearch{

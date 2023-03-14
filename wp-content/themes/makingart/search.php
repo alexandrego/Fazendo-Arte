@@ -2,7 +2,7 @@
   get_header();
   get_template_part('partials/post', 'header');
 ?>
-  <div class="container col-lg-9" id="loader">
+  <div class="container col-lg-9" id="container">
     
     <header class="page-header">
       <h1 class="page-title">
@@ -39,7 +39,7 @@
         ?>
       </div>
     </div>
-  </div>    
+  </div>
 <?php
   get_footer();
 ?>
