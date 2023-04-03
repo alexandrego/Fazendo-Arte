@@ -73,7 +73,7 @@ class Logger {
 		self::log( $method, "{$url}\n\n{$data}\n ajax: {$doing_ajax}", $level );
 
 		// Only want to console log pixel fire
-		if ( 'POST' === $method && strpos( $url, 'pixel/track') ) {
+		if ( 'POST' === $method && strpos( $url, 'pixel/track' ) ) {
 			$this->maybe_output_pixel_data( json_encode( $data ) );
 		}
 	}

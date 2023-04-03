@@ -38,12 +38,18 @@ class Tt4b_Pixel_Class {
 			return;
 		}
 
+		$pixel_obj              = new Tt4b_Pixel_Class();
+		$should_send_event_data = $pixel_obj->confirm_to_send_s2s_events( $fields['access_token'], $fields['advertiser_id'], $fields['pixel_code'] );
+		if ( ! $should_send_event_data ) {
+			$logger->log( __METHOD__, 'will not send event data for this pixel' );
+			return;
+		}
+
 		$event        = 'AddToCart';
 		$current_user = wp_get_current_user();
 
-		$email        = $current_user->user_email;
+		$email = $current_user->user_email;
 
-		$pixel_obj    = new Tt4b_Pixel_Class();
 		$hashed_email = $pixel_obj->get_advanced_matching_hashed_email( $email );
 		$timestamp    = gmdate( 'c', time() );
 		$ipaddress    = WC_Geolocation::get_ip_address();
@@ -86,11 +92,11 @@ class Tt4b_Pixel_Class {
 
 		$params = [
 			'partner_name' => 'WooCommerce',
-			'pixel_code' => $fields['pixel_code'],
-			'event'      => $event,
-			'timestamp'  => $timestamp,
-			'properties' => $properties,
-			'context'    => $context,
+			'pixel_code'   => $fields['pixel_code'],
+			'event'        => $event,
+			'timestamp'    => $timestamp,
+			'properties'   => $properties,
+			'context'      => $context,
 		];
 		$mapi->mapi_post( 'pixel/track/', $fields['access_token'], $params );
 	}
@@ -113,11 +119,16 @@ class Tt4b_Pixel_Class {
 			return;
 		}
 
+		$pixel_obj              = new Tt4b_Pixel_Class();
+		$should_send_event_data = $pixel_obj->confirm_to_send_s2s_events( $fields['access_token'], $fields['advertiser_id'], $fields['pixel_code'] );
+		if ( ! $should_send_event_data ) {
+			$logger->log( __METHOD__, 'will not send event data for this pixel' );
+			return;
+		}
+
 		$event        = 'ViewContent';
 		$current_user = wp_get_current_user();
 		$email        = $current_user->user_email;
-
-		$pixel_obj    = new Tt4b_Pixel_Class();
 		$hashed_email = $pixel_obj->get_advanced_matching_hashed_email( $email );
 		$timestamp    = gmdate( 'c', time() );
 		$ipaddress    = WC_Geolocation::get_ip_address();
@@ -160,11 +171,11 @@ class Tt4b_Pixel_Class {
 
 		$params = [
 			'partner_name' => 'WooCommerce',
-			'pixel_code' => $fields['pixel_code'],
-			'event'      => $event,
-			'timestamp'  => $timestamp,
-			'properties' => $properties,
-			'context'    => $context,
+			'pixel_code'   => $fields['pixel_code'],
+			'event'        => $event,
+			'timestamp'    => $timestamp,
+			'properties'   => $properties,
+			'context'      => $context,
 		];
 		$mapi->mapi_post( 'pixel/track/', $fields['access_token'], $params );
 	}
@@ -182,6 +193,13 @@ class Tt4b_Pixel_Class {
 		$mapi   = new Tt4b_Mapi_Class( $logger );
 		$fields = self::pixel_event_tracking_field_track( __METHOD__ );
 		if ( 0 === count( $fields ) ) {
+			return;
+		}
+
+		$pixel_obj              = new Tt4b_Pixel_Class();
+		$should_send_event_data = $pixel_obj->confirm_to_send_s2s_events( $fields['access_token'], $fields['advertiser_id'], $fields['pixel_code'] );
+		if ( ! $should_send_event_data ) {
+			$logger->log( __METHOD__, 'will not send event data for this pixel' );
 			return;
 		}
 
@@ -213,7 +231,6 @@ class Tt4b_Pixel_Class {
 		$current_user = wp_get_current_user();
 		$email        = $current_user->user_email;
 
-		$pixel_obj    = new Tt4b_Pixel_Class();
 		$hashed_email = $pixel_obj->get_advanced_matching_hashed_email( $email );
 		$timestamp    = gmdate( 'c', time() );
 		$ipaddress    = WC_Geolocation::get_ip_address();
@@ -246,11 +263,11 @@ class Tt4b_Pixel_Class {
 
 		$params = [
 			'partner_name' => 'WooCommerce',
-			'pixel_code' => $fields['pixel_code'],
-			'event'      => $event,
-			'timestamp'  => $timestamp,
-			'properties' => $properties,
-			'context'    => $context,
+			'pixel_code'   => $fields['pixel_code'],
+			'event'        => $event,
+			'timestamp'    => $timestamp,
+			'properties'   => $properties,
+			'context'      => $context,
 		];
 		$mapi->mapi_post( 'pixel/track/', $fields['access_token'], $params );
 	}
@@ -276,11 +293,17 @@ class Tt4b_Pixel_Class {
 			return;
 		}
 
+		$pixel_obj              = new Tt4b_Pixel_Class();
+		$should_send_event_data = $pixel_obj->confirm_to_send_s2s_events( $fields['access_token'], $fields['advertiser_id'], $fields['pixel_code'] );
+		if ( ! $should_send_event_data ) {
+			$logger->log( __METHOD__, 'will not send event data for this pixel' );
+			return;
+		}
+
 		$event        = 'InitiateCheckout';
 		$current_user = wp_get_current_user();
 		$email        = $current_user->user_email;
 
-		$pixel_obj    = new Tt4b_Pixel_Class();
 		$hashed_email = $pixel_obj->get_advanced_matching_hashed_email( $email );
 		$timestamp    = gmdate( 'c', time() );
 		$ipaddress    = WC_Geolocation::get_ip_address();
@@ -330,11 +353,11 @@ class Tt4b_Pixel_Class {
 
 		$params = [
 			'partner_name' => 'WooCommerce',
-			'pixel_code' => $fields['pixel_code'],
-			'event'      => $event,
-			'timestamp'  => $timestamp,
-			'properties' => $properties,
-			'context'    => $context,
+			'pixel_code'   => $fields['pixel_code'],
+			'event'        => $event,
+			'timestamp'    => $timestamp,
+			'properties'   => $properties,
+			'context'      => $context,
 		];
 
 		$mapi->mapi_post( 'pixel/track/', $fields['access_token'], $params );
@@ -349,14 +372,23 @@ class Tt4b_Pixel_Class {
 	 */
 	public function get_pixels( $access_token, $advertiser_id, $pixel_code ) {
 		// returns a raw API response from TikTok pixel/list/ endpoint
-		$endpoint = 'pixel/list/';
-		$params   = [
+		$params = [
 			'advertiser_id' => $advertiser_id,
 			'code'          => $pixel_code,
 		];
-		$mapi     = new Tt4b_Mapi_Class( new Logger( wc_get_logger() ) );
-		$result   = $mapi->mapi_get( $endpoint, $access_token, $params );
-		return $result;
+		$url    = 'https://business-api.tiktok.com/open_api/v1.3/pixel/list/?' . http_build_query( $params );
+		$args   = [
+			'method'  => 'GET',
+			'headers' => [
+				'Access-Token' => $access_token,
+				'Content-Type' => 'application/json',
+			],
+		];
+		$logger = new Logger( wc_get_logger() );
+		$logger->log_request( $url, $args );
+		$result = wp_remote_get( $url, $args );
+		$logger->log_response( __METHOD__, $result );
+		return wp_remote_retrieve_body( $result );
 	}
 
 	/**
@@ -422,6 +454,46 @@ class Tt4b_Pixel_Class {
 		return $option;
 	}
 
+	/**
+	 *  Checks to see whether to track events s2s
+	 *
+	 * @param string $access_token The access token
+	 * @param string $advertiser_id The advertiser_id
+	 * @param string $pixel_code The pixel_code
+	 *
+	 * @return bool
+	 */
+	public function confirm_to_send_s2s_events( $access_token, $advertiser_id, $pixel_code ) {
+		$should_send_events = get_option( 'tt4b_should_send_s2s_events' );
+		if ( false === $should_send_events ) {
+			$pixel_obj          = new Tt4b_Pixel_Class();
+			$pixel_rsp          = $pixel_obj->get_pixels(
+				$access_token,
+				$advertiser_id,
+				$pixel_code
+			);
+			$pixel              = json_decode( $pixel_rsp, true );
+			// case 1: always send events for woo_commerce pixels
+			update_option( 'tt4b_should_send_s2s_events', 'YES' );
+			if ( '' !== $pixel ) {
+				$connected_pixel = $pixel['data']['pixels'][0];
+				$partner         = $connected_pixel['partner_name'];
+				if ( 'WOO_COMMERCE' !== $partner ) {
+					update_option( 'tt4b_should_send_s2s_events', 'NO' );
+					// case 2: if the pixel is not a partner pixel, send events if no recent activity
+					if ( 'ACTIVE' !== $connected_pixel['activity_status'] ) {
+						update_option( 'tt4b_should_send_s2s_events', 'YES' );
+					}
+				}
+			}
+		}
+
+		$should_send_event_data = get_option( 'tt4b_should_send_s2s_events' );
+		if ( 'NO' === $should_send_event_data ) {
+			return false;
+		}
+		return true;
+	}
 
 
 	/**

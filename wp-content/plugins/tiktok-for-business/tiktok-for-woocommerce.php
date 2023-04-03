@@ -9,7 +9,7 @@
  * Plugin URI: https://wordpress.org/plugins/tiktok-for-business
  * Description: With the TikTok x WooCommerce integration, it's easier than ever to unlock innovative social commerce features for your business to drive traffic and sales to a highly engaged community. With guided & simple setup prompts, you can sync your WooCommerce product catalog and promote it with custom ads without leaving your dashboard. Also, in just 1 click you can install the most-advanced TikTok pixel to unlock advanced visibility into detailed campaign performance tracking. Reach over 1 billion users, globally, and drive more e-commerce sales when you sell via one of the world’s most downloaded applications!
  * Author: TikTok
- * Version: 1.0.15
+ * Version: 1.0.16
  *
  * Requires at least: 5.7.0
  * Tested up to: 6.1
@@ -31,6 +31,9 @@ require_once __DIR__ . '/catalog/Tt4b_Catalog_Class.php';
 require_once __DIR__ . '/pixel/Tt4b_Pixel_Class.php';
 require_once __DIR__ . '/admin/tts/common.php';
 
+use Automattic\WooCommerce\Admin\Features\OnboardingTasks\TaskLists;
+use tiktok\admin\Tasks\Onboarding;
+
 /**
  * The plugin loader class
  */
@@ -42,7 +45,7 @@ final class Tiktokforbusiness {
 	 * @var string[]
 	 */
 	private static $current_tiktok_for_woocommerce_version = [
-		'version' => '1.0.15',
+		'version' => '1.0.16',
 	];
 
 	/**
@@ -67,6 +70,7 @@ final class Tiktokforbusiness {
 
 		require_once __DIR__ . '/admin/tts/order_list.php';
 		require_once __DIR__ . '/admin/tts/order_detail.php';
+		require_once __DIR__ . '/admin/Tasks/Onboarding.php';
 		require_once __DIR__ . '/admin/tt4b_menu.php';
 		require_once __DIR__ . '/pixel/tt4b_pixel.php';
 
@@ -91,6 +95,28 @@ final class Tiktokforbusiness {
 		$catalog = new Tt4b_Catalog_Class( $mapi, $logger );
 		$mapi->init();
 		$catalog->init();
+
+		// Hook the onboarding task. The hook admin_init is not triggered when the WC fetches the tasks using the endpoint: wp-json/wc-admin/onboarding/tasks and hence hooking into init.
+		add_action( 'init', [ $this, 'add_onboarding_task' ], 20 );
+	}
+
+	/**
+	 * Adds the onboarding task to the Tasklists.
+	 *
+	 * @since x.x.x
+	 */
+	public function add_onboarding_task() {
+		if ( ! class_exists( TaskLists::class ) ) {
+			// WC 5.9 backward compatibility.
+			return;
+		}
+
+		TaskLists::add_task(
+			'extended',
+			new Onboarding(
+				TaskLists::get_list( 'extended' )
+			)
+		);
 	}
 
 	/**
@@ -153,6 +179,7 @@ final class Tiktokforbusiness {
 		delete_option( 'tt4b_mapi_total_gmv' );
 		delete_option( 'tt4b_mapi_total_orders' );
 		delete_option( 'tt4b_mapi_tenure' );
+		delete_option( 'tt4b_should_send_s2s_events' );
 	}
 
 	/**

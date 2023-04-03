@@ -3,7 +3,7 @@ Contributors: tiktokforbusiness, woocommerce, automattic
 Tags: tiktok
 Requires at least: 5.7.0
 Tested up to: 6.1
-Stable tag: 1.0.15
+Stable tag: 1.0.16
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -118,6 +118,10 @@ In order to submit a customer support ticket, you must have a TikTok for Busines
 5. Fill out the required fields in the support ticket
 
 == Changelog ==
+2023-3-15 - version 1.0.16
+* Add - WooCommerce Onboarding task asking users to connect to TikTok
+* Update - Setup improvement to allow connection of existing pixels
+
 2023-1-17 - version 1.0.15
 * Fix - type conversion when outputting pixel data
 

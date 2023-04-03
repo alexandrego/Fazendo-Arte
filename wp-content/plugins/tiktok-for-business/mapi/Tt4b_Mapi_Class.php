@@ -258,8 +258,8 @@ class Tt4b_Mapi_Class {
 	 * @return string
 	 */
 	private function generate_cron_string() {
-		$minute = rand(0, 59);
-		$hour = rand(0, 23);
+		$minute = rand( 0, 59 );
+		$hour   = rand( 0, 23 );
 		return '' . $minute . ' ' . $hour . ' * * 0-6';
 	}
 
@@ -365,6 +365,13 @@ class Tt4b_Mapi_Class {
 		}
 	}
 
+	/**
+	 * TTS Disconnect
+	 *
+	 * @param string $external_data The external data
+	 *
+	 * @return void
+	 */
 	public function tts_shop_disconnect( $external_data ) {
 		$base_url = 'https://business-api.tiktok.com/tbp/v2.0/shop/connection/disconnect';
 		$url      = $base_url . '?external_data=' . $external_data;

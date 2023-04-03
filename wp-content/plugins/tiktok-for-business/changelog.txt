@@ -1,4 +1,8 @@
 *** Changelog ***
+2023-3-14 - version 1.0.16
+* Add - WooCommerce Onboarding task asking users to connect to TikTok
+* Update - Setup improvement to allow connection of existing pixels
+
 2023-1-17 - version 1.0.15
 * Fix - type conversion when outputting pixel data
 

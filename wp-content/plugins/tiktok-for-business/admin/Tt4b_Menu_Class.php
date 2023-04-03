@@ -146,6 +146,42 @@ class Tt4b_Menu_Class {
 			'unit' => 'DAYS',
 		];
 
+		$obj = [
+			'external_business_id' => $external_business_id,
+			'business_platform'    => $business_platform,
+			'locale'               => $locale,
+			'version'              => $version,
+			'timestamp'            => $timestamp,
+			'timezone'             => $timezone,
+			'country_region'       => $country_iso,
+			'email'                => $email,
+			'industry_id'          => $industry_id,
+			'store_name'           => $shop_name,
+			'currency'             => $currency,
+			'website_url'          => $shop_url,
+			'domain'               => $shop_domain,
+			'app_id'               => $app_id,
+			'redirect_uri'         => $redirect_uri,
+			'hmac'                 => $hmac,
+			'close_method'         => 'redirect_inside_tiktok',
+			'is_email_verified'    => true,
+			'is_verified'          => true,
+			'net_gmv'              => $net_gmv,
+			'net_order_count'      => $net_order_count,
+			'tenure'               => $tenure,
+			'extra_data'           => $current_tiktok_for_woocommerce_version,
+			'address_1'            => $store_address,
+			'address_2'            => $store_address_2,
+			'city'                 => $store_city,
+			'state'                => $store_state,
+			'zip_code'             => $store_postcode,
+		];
+
+		$external_data = base64_encode( json_encode( $obj, JSON_UNESCAPED_SLASHES ) );
+		update_option( 'tt4b_external_data', $external_data );
+		// log the external_data for ease of debugging.
+		$logger->log( __METHOD__, 'external_data: ' . $external_data );
+
 		$access_token = get_option( 'tt4b_access_token' );
 		if ( false !== $access_token ) {
 			$is_connected = true;
@@ -210,45 +246,9 @@ class Tt4b_Menu_Class {
 			}
 		}
 
-		$obj = [
-			'external_business_id' => $external_business_id,
-			'business_platform'    => $business_platform,
-			'locale'               => $locale,
-			'version'              => $version,
-			'timestamp'            => $timestamp,
-			'timezone'             => $timezone,
-			'country_region'       => $country_iso,
-			'email'                => $email,
-			'industry_id'          => $industry_id,
-			'store_name'           => $shop_name,
-			'currency'             => $currency,
-			'website_url'          => $shop_url,
-			'domain'               => $shop_domain,
-			'app_id'               => $app_id,
-			'redirect_uri'         => $redirect_uri,
-			'hmac'                 => $hmac,
-			'close_method'         => 'redirect_inside_tiktok',
-			'is_email_verified'    => true,
-			'is_verified'          => true,
-			'net_gmv'              => $net_gmv,
-			'net_order_count'      => $net_order_count,
-			'tenure'               => $tenure,
-			'extra_data'           => $current_tiktok_for_woocommerce_version,
-			'address_1'            => $store_address,
-			'address_2'            => $store_address_2,
-			'city'                 => $store_city,
-			'state'                => $store_state,
-			'zip_code'             => $store_postcode,
-		];
-
-		$external_data = base64_encode( json_encode( $obj, JSON_UNESCAPED_SLASHES ) );
-		update_option( 'tt4b_external_data', $external_data );
-		// log the external_data for ease of debugging.
-		$logger->log( __METHOD__, 'external_data: ' . $external_data );
-
 		// enqueue js.
 		echo '<div class="tt4b_wrap" id="tiktok-for-business-root"></div>';
-		wp_register_script( 'tt4b_cdn', 'https://sf16-scmcdn-va.ibytedtos.com/obj/static-us/tiktok-business-plugin/tbp_external_platform-v2.3.10.js', '', 'v1', false );
+		wp_register_script( 'tt4b_cdn', 'https://sf16-scmcdn-va.ibytedtos.com/obj/static-us/tiktok-business-plugin/tbp_external_platform-v2.3.11.js', '', 'v1', false );
 		wp_register_script( 'tt4b_script', plugins_url( '/admin/js/localJs.js', dirname( __DIR__ ) . '/Tiktokforbusiness.php' ), [ 'tt4b_cdn' ], 'v1', false );
 		wp_enqueue_script( 'tt4b_script' );
 		wp_localize_script(
