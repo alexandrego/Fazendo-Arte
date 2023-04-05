@@ -21,7 +21,7 @@
     </header>
 
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 product-search-container">
         <?php
           if(have_posts()):
             while(have_posts()) :

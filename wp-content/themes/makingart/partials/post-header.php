@@ -2,7 +2,7 @@
   <div class="divHeader">
     <a href="<?php echo home_url('/'); ?>" onclick="goHomeEffect()">
       <div class="divLogo">
-        <img src="./wp-content/themes/makingart/assets/images/fazendo-arte.webp" title="Logo Fazendo Arte" alt="Logo Fazendo Arte" class="imgPrincipalLogo">
+        <img src="<?php echo home_url('/'); ?>wp-content/themes/makingart/assets/images/fazendo-arte.webp" title="Logo Fazendo Arte" alt="Logo Fazendo Arte" class="imgPrincipalLogo">
         <div style="margin: 0 0 0 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
           <div>
             Fazendo

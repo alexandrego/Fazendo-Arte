@@ -7,7 +7,7 @@
 
   <?php wp_head(); ?>
 </head>
-<!-- <body onload="waitThreeSeconds()"> -->
+
 <body onload="splashScreen()">
 
   <div id="divFirstLoader" class="divFirstLoader">

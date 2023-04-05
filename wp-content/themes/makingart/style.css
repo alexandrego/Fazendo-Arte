@@ -395,6 +395,20 @@ body{
   font-size: 15px;
 }
 
+/* Controla tamanho das imagens na página search */
+.product-search-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+.product-search{
+  width: 200px;
+}
+.product-search-image{
+  width: 200px;
+}
+
 /* Mostra produtos de acordo com o tamalho da tela */
 /* Mostra produtos para tela de 1024px */
 .divProductLoop1024{
