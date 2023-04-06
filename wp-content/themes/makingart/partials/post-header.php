@@ -15,7 +15,7 @@
     </a>
 
     <div class="divSearch">      
-      <form role="search" method="get" id="searchform" class="searchform" action="<?php echo get_home_url(); ?>" onsubmit="searchProduct()">
+      <form role="search" method="get" id="searchform" class="searchform" action="<?php echo get_home_url(); ?>" onsubmit="goHomeEffect()">
         <div class="searchInputAndButton">
           <label class="screen-reader-text" for="s">Pesquisar por:</label>
           <input

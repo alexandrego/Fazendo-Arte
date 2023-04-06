@@ -27,7 +27,7 @@
           $product_link = get_permalink($product->ID);
         ?>
           <a href="<?php echo $product_link; ?>">
-            <div class="divIndividualProduct">
+            <div class="divIndividualProduct" onclick="goHomeEffect()">
               <img src="<?php echo $product_img; ?>"/>
 
               <div class="divIndividualProductTitle">
@@ -165,7 +165,7 @@
                     $preco_pego = $product_price/$quant_parcela;
                   }
                   
-                echo '<span style="font-size:14px;color:green;">R$</span> <span style="font-size:20px;color:green;font-weight:600;">'.number_format($product_price, 2, ",", ".");
+                echo '<span style="font-size:14px;color:green;">R$</span> <span style="font-size:20px;color:green;font-weight:600;">'.number_format($product_price, 2, ",", ".").'</span>';
                 ?></p>
               </div>
               <?php
