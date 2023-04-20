@@ -3,8 +3,16 @@ require_once(get_template_directory() . '/inc/class-nav-bootstrap-walker.php');
 
 add_action('after_setup_theme', 'fazendo_arte_setup');
 function fazendo_arte_setup(){
-  add_theme_support('post-thumbnails');
   add_theme_support('title-tag');
+  add_theme_support('post-thumbnails');
+  // add_theme_support( 'post-thumbnails', array( 'post' ) );          // Posts only
+  // add_theme_support( 'post-thumbnails', array( 'page' ) );          // Pages only
+  // add_theme_support( 'post-thumbnails', array( 'post', 'movie' ) ); // Posts and Movies
+  
+  // add_theme_support( 'woocommerce' );
+  add_theme_support( 'wc-product-gallery-zoom' );
+  add_theme_support( 'wc-product-gallery-lightbox' );
+  add_theme_support( 'wc-product-gallery-slider' );
   register_nav_menus(
     array(
       'primary' => 'Primary'

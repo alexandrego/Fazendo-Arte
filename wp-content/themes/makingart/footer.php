@@ -1,3 +1,4 @@
+</div> <!-- Div Container -->
 <footer>
   <div class="divFooter">    
     <a href="<?php echo home_url('/'); ?>" onclick="goHomeEffect()">
